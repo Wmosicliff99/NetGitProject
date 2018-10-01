@@ -1,0 +1,167 @@
+package Personal_Project;
+
+import java.awt.*;
+import javax.swing.*;
+import javax.awt.event.ActionEvent;
+import javax.awt.event.ActionListener;
+
+
+
+/**
+ *
+ * @author Cliff W'mosi
+ */
+public class User_Form {
+    static JTextField fname_text;
+    static JTextField name_text;
+    static JRadioButton female;
+    static JRadioButton male;
+    private static Object add_textArea;
+    public static void main(String args[]){
+        
+        JFrame frame = new JFrame("Registration Form :");
+        JLabel heading_lbl = new JLabel();
+        JLabel fname_lbl = new JLabel("First Name :");
+        fname_text = new JTextField();
+        JLabel lname_lbl = new JLabel("Last Name :");
+        JLabel tel_lbl = new JLabel("Telephone :");
+        JTextField tel_txt =  new JTextField();
+        JLabel DoB_lbl = new JLabel("Date of Birth :");
+        JLabel gender_lbl = new JLabel("Gender :");
+        JButton submit_btn = new JButton("Submit :");
+        JTextArea output_txtArea = new JTextArea();
+        Font font = new Font(Font.MONOSPACED,30);
+        JLabel heading_lbl = new JLabel();
+        
+        JCheckBox = checkbx = new JCheckBox("I accept all terms and conditions");
+        
+        
+        JComboBox day = new JComboBox(day_arr);
+        JComboBox month = new JComboBox(month_arr);
+        JComboBox year = new JComboBox(year_arr);
+        
+       
+        
+        heading_lbl.setBounds(300,7,240,35);
+        fname_lbl.setBounds(60,75,110,35);
+        lname_lbl.setBounds(60,80,150,35);
+        tel_lbl.setBounds(60,250,190,35);
+        tel_txt.setBounds(190,250,110,35);
+        tel_txt.setBounds(190,250,110,35);
+        DoB_lbl.setBounds(60,250,110,35);
+        submit_btn.setBounds(200,275,190,45);
+        day.setBounds(190,250,45,35);
+        month.setBounds(250,200,60,35);
+        year.setBounds(300,200,60,35);
+        output_txtArea.setBounds(400,80,270,350);
+        checkbx.setBounds(65,450,320,35);
+        checkbx.setBackground(Color.LIGHT_GRAY);
+        
+        String day_arr[] = new String[31];
+        for(int a = 1; a <= 31; a++)
+            day_arr[a-1] = Integer.toString(a);
+        
+        String month_arr[] = {""Jan","Feb","March","Apr","May","June","Jul","Aug","Sept","Oct","Nov","Dec}
+        
+        String year_arr[] = new String[92];
+        for(int a = 1930; a <= 2022; a++)
+            year_arr[a-1930] = Integer.toString(a);
+            
+        Cursor cur = null;
+        submit_btn.setCursor(cur);
+        submit btn.addActionListener(new ActionListener){
+            private Object checkbx;
+            private Object output_txtArea;
+            @Override
+            public void void actionPerformed(ActionEvent event){
+                submit_action(event);
+            }
+            
+            private void actionPerformed(ActionEvent event){
+                if(checkbx.isSelected() == true){
+                    String fname =name_text.getText();
+                    String lname =fname_text.getText();
+                    String gender ="Female";
+                    if(female.isSelected() ==true)
+                        gender = "Male";
+                    String add = add_textArea.getText();
+                    String day_name = (String)day.getSelectedItem();
+                    String month_name = (String)month.getSelectedItem();
+                    String year_name = (String)year.getSelectedItem();
+                    String fname =name_text.getText();
+                    String telphone =tel_text.getText();
+                    
+                    output_txtArea.setText(
+                                    "First Name : " + fname +
+                                    "\n Last Name : " +lname + 
+                                      "\n Gender  : " +gender +
+                                        "\n Date of Birth : "+day_name + month_name+ year_name+
+                                          "\n Telephone : "+"\n");
+                }
+                else
+                {
+                    
+                }
+                                   
+                    
+             
+               
+                    
+        
+        
+        
+        a.add(fname_lbl);
+        a.add(name_text);
+        a.add(fname_text);
+        a.add(submit_btn);
+        a.add(male);
+        a.add(female);
+        a.add(DoB_lbl);
+        a.add(tel_lbl);
+        a.add(day);
+        a.add(month);
+        a.add(lname_lbl);
+        a.add(fname_lbl);
+        a.add(tel_text);
+        a.add(checkbx);
+        a.add(output_txtArea);
+        a.add(heading_lbl)
+
+
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        frame.setVisible(true);
+        frame.setBounds(300,150,800,750);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        
+        
+        t.setLayout(null);
+        Container a= frame.getContentPane();
+        heading_lbl.setFont(font);
+        heading_lbl.setText("<html><font><b><c>Registration</c></b></html>");
+        name_txt.setFont(font);
+        female.setFont(font);
+        male.setFont(font);
+        
+        
+        a.setBackground(Color.WHITE);
+        
+
+
+        
+        
+    }
+    
+}
