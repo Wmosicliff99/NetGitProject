@@ -1,0 +1,43 @@
+package procedure;
+
+import java.sql.*;
+import java.awt.event.*;
+
+
+
+/**
+ *
+ * @author Cliff W'mosi
+ */
+public class The_connection {
+    public static Connection getConnection(){
+        Connection con = null;
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/registrationfrom?zeroDateTimeBehaviour = convertToNull [root on Default}");
+            
+            Statement st = con.createStatement();
+            String queryl = "INSERT INTO lOGIN VALUES('pass', 'Max')";
+            st.excecuteUpdate(queryl);
+            System.out.print("Query 1 success");
+            
+            String query2 = "SELECT * from login";
+            ResultSet rs = st.executeQuery(query2);
+            while(rs.next()){
+                String name = rs.getString("Username");
+                String pass = rs.getString ("Password");       
+           
+            System.out.print("Username :"+name+" Password :"+pass);
+                   
+        }
+            System.out.print("Results Received");
+    }
+        catch (Exception ex){
+            System.out.print("Error");
+            
+            
+        }
+          return con;  
+        }
+    
+}
