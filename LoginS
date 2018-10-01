@@ -1,0 +1,117 @@
+package Personal_Project;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Font;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+
+/**
+ *
+ * @author Cliff W'mosi
+ */
+public class LoginsS {
+    public static void main(String[] args){
+        JFrame UserForm = new JFrame("Add User Form");
+        JPanel a = new JPanel();
+        JLabel title = new JLabel("ADD A NEW USER");
+        JLabel fName = new JLabel("First Name");
+        JLabel lName = new JLabel("Last Name");
+        JLabel telephone = new JLabel("Telephone");
+        JLabel DoB = new JLabel("Date of Birth");
+        JLabel gender = new JLabel("Gender");
+        JLabel male = new JLabel("Male");
+        JLabel female = new JLabel("Female");
+        JButton submit_btn = new JButton("Submit");
+        
+        
+        JRadioButton r = new JRadioButton();
+        JRadioButton s = new JRadioButton();
+        
+        JTextField w = new JTextField();
+        JTextField x = new JTextField();
+        JTextField y = new JTextField();
+        JTextField z = new JTextField();
+        w.setColumns(30);
+        x.setColumns(30);
+        y.setColumns(30);
+        z.setColumns(30);
+        
+        JButton clear = new JButton("clear");
+        JButton saveUser = new JButton("Save User");
+        Container a;
+        a = UserForm.getContentPane();
+        a.setBackground(Color.WHITE);
+        a.setLayout(null);
+        
+        title.setFont(new Font("Serif", Font.PLAIN, 30));
+        fName.setFont(new Font("Serif", Font.PLAIN, 30));
+        lName.setFont(new Font("Serif", Font.PLAIN, 30));
+        telephone.setFont(new Font("Serif", Font.PLAIN, 30));
+        DoB.setFont(new Font("Serif", Font.PLAIN, 30));
+        gender.setFont(new Font("Serif", Font.PLAIN, 30));
+        male.setFont(new Font("Serif", Font.PLAIN, 30));
+        female.setFont(new Font("Serif", Font.PLAIN, 30));
+        w.setFont(new Font("Serif", Font.PLAIN, 30));
+        x.setFont(new Font("Serif", Font.PLAIN, 30));
+        y.setFont(new Font("Serif", Font.PLAIN, 30));
+        z.setFont(new Font("Serif", Font.PLAIN, 26));
+        clear.setFont(new Font("Serif", Font.PLAIN, 30));
+        saveUser.setFont(new Font("Serif", Font.PLAIN, 26));
+        submit_btn.setFont(new Font("Serif", Font.BOLD,30));
+       
+        
+        a.setLayout(null);
+        a.add(title);
+        a.add(fName);
+        a.add(lName);
+        a.add(telephone);        
+        a.add(DoB);      
+        a.add(gender);      
+        a.add(male);
+        a.add(female);
+        a.add(w);
+        a.add(x);
+        a.add(y);
+        a.add(z);
+        a.add(r);
+        a.add(s);
+        a.add(clear);
+        a.add(saveUser);
+        UserForm.add(a);
+        a.add(submit_btn);
+        
+        title.setBounds(700,50,350,30);
+        fName.setBounds(500,250,400,35);
+        lName.setBounds(500,250,400,35);
+        telephone.setBounds(450,450,400,30);
+        DoB.setBounds(450,500,300,35);
+        gender.setBounds(500,500,400,35);
+        male.setBounds(750,500,300,35);
+        female.setBounds(850,500,300,35);
+        w.setBounds(500,300,800,30);
+        x.setBounds(500,300,800,30);
+        y.setBounds(500,300,800,30);
+        z.setBounds(500,300,800,30);
+        r.setBounds(700,500,30,30);
+        s.setBounds(1000,500,30,30);
+        clear.setBounds(600,700,300,30);
+        saveUser.setBounds(900,700,300,35);
+        submit_btn.setBounds(180,500,120,40);
+        cursor cur = null;
+        submit_btn.setCurosr(cur);
+        
+        UserForm.setSize(1800,1100);
+        UserForm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        UserForm.setVisible(true);
+        
+        
+        
+        
+    }
+
+    
+}
